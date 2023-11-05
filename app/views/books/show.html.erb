@@ -1,0 +1,9 @@
+<div class="profile-container">
+  <h3 class="profile-name"><%= @book.name %></h3>
+  <%= image_tag @book.get_profile_image(100,100) %>
+  <% if @book.id == current_user.id %>
+  <p><%= link_to "プロフィール編集", edit_user_path(@book) %></p>
+  <% if @book.user == current_user %>
+    <%= link_to "削除", book_path(@book), method: :delete %>
+  <% end %>
+</div>

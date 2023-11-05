@@ -1,0 +1,20 @@
+<% books.each do |book| %>
+
+
+<h1>New book</h1>
+
+<%= @books.each do |book| %>
+
+<p>Title</p>
+
+<span><%= book.title %></span>
+
+<p>画像</p>
+  <%= image_tag book.image, size: "200x200" %>
+  <% else %>
+    <%= image_tag 'no_image', size: "200x200" %>
+  <% end %>
+
+<% end %>
+
+<%= render 'post_images/list', post_images: @post_images %>

@@ -1,0 +1,31 @@
+<div class="profile-container">
+  <p id="notice">Welcome! You have signed up successfully.</p>
+  <h2>User info</h2>
+  <h3 class="profile-name"><%= @user.name %></h3>
+  <%= image_tag @user.get_profile_image(100,100) %>
+  <% if @user.id == current_user.id %>
+
+  <% end %>
+
+  <th>name</th>
+
+  <th>introduction</th>
+
+
+  <h2>New book</h2>
+  <label for="book_title">Title</label>
+
+  <input class="form-control book_title" type="text" name="book[title]" id="book_title">
+
+  <label for="book_opinion">Opinion</label>
+
+  <textarea class="form-control book_body" name="book[body]" id="book_body"></textarea>
+
+  <input type="submit" name="commit" value="Create Book" class="btn btn-success" data-disable-with="Create Book">
+
+  <h2>Books</h2>
+  <th>Title</th>
+
+</div>
+
+<%# render 'post_images/list', post_images: @post_images %>
